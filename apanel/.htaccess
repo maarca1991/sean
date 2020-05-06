@@ -1,0 +1,78 @@
+RewriteOptions inherit
+# For security reasons, Option followsymlinks cannot be overridden.
+#Options +FollowSymLinks
+Options +SymLinksIfOwnerMatch
+RewriteEngine on
+
+RewriteRule ^404/?$ 404.php [NC,L]
+
+RewriteRule ^apanel/?$ apanel/index.php [NC,L]
+RewriteRule ^index/?$ index.php [NC,L]
+
+RewriteRule ^process-login/?$ process_login.php [NC,L]
+RewriteRule ^logout/?$ logout.php [NC,L]
+
+RewriteRule ^forgot-password/?$ forgot_password.php [NC,L]
+RewriteRule ^process-forget-pass/?$ process_forget_password.php [NC,L]
+
+#RewriteRule ^set-new-password/([0-9]+)/([A-Za-z0-9-_]+)/?$ set_new_password.php?id=$1&slug=$2 [NC,L]
+RewriteRule ^set-new-password/([A-Za-z0-9-_]+)/([A-Za-z0-9-_]+)/?$ set_new_password.php?id=$1&slug=$2 [NC,L]
+RewriteRule ^process-set-new-password/?$ process_set_new_password.php [NC,L]
+#RewriteRule ^activate-account/([A-Za-z0-9-_]+)/([A-Za-z0-9-_]+)/?$ activate_account.php?lastid=$1&activation_code=$2 [NC,L]
+
+#RewriteRule ^register/?$ register.php [NC,L]
+
+RewriteRule ^dashboard/?$ dashboard.php [NC,L]
+RewriteRule ^my-account/?$ my_account.php [NC,L]
+
+
+## Employee ##
+RewriteRule ^manage-employee/?$ manage_employee.php [NC,L]
+RewriteRule ^add-employee/([A-Za-z0-9-_]+)/?$ add_employee.php?mode=$1 [NC,L]
+RewriteRule ^add-employee/([A-Za-z0-9-_]+)/([A-Za-z0-9-_]+)/?$ add_employee.php?mode=$1&id=$2 [NC,L]
+
+## Category ##
+RewriteRule ^manage-category/?$ manage_category.php [NC,L]
+RewriteRule ^add-category/([A-Za-z0-9-_]+)/?$ add_category.php?mode=$1 [NC,L]
+RewriteRule ^add-category/([A-Za-z0-9-_]+)/([A-Za-z0-9-_]+)/?$ add_category.php?mode=$1&id=$2 [NC,L]
+
+## Color ##
+RewriteRule ^manage-color/?$ manage_color.php [NC,L]
+
+## Size ##
+RewriteRule ^manage-size/?$ manage_size.php [NC,L]
+
+## Product ##
+RewriteRule ^manage-product/?$ manage_product.php [NC,L]
+RewriteRule ^add-product/([A-Za-z0-9-_]+)/?$ add_product.php?mode=$1 [NC,L]
+RewriteRule ^add-product/([A-Za-z0-9-_]+)/([A-Za-z0-9-_]+)/?$ add_product.php?mode=$1&id=$2 [NC,L]
+
+## Product Alternate Images ##
+RewriteRule ^manage-alt-image/([A-Za-z0-9-_]+)/?$ manage_alt_image.php?product_id=$1 [NC,L]
+RewriteRule ^add-alt-image/([A-Za-z0-9-_]+)/([A-Za-z0-9-_]+)/?$ add_alt_image.php?mode=$1&product_id=$2 [NC,L]
+RewriteRule ^add-alt-image/([A-Za-z0-9-_]+)/([A-Za-z0-9-_]+)/([A-Za-z0-9-_]+)/?$ add_alt_image.php?mode=$1&product_id=$2&id=$3 [NC,L]
+
+## Product Variant Prices ##
+RewriteRule ^manage-price/([A-Za-z0-9-_]+)/?$ manage_price.php?product_id=$1 [NC,L]
+
+## FAQ ##
+RewriteRule ^manage-faq/?$ manage_faq.php [NC,L]
+RewriteRule ^add-faq/([A-Za-z0-9-_]+)/?$ add_faq.php?mode=$1 [NC,L]
+RewriteRule ^add-faq/([A-Za-z0-9-_]+)/([A-Za-z0-9-_]+)/?$ add_faq.php?mode=$1&id=$2 [NC,L]
+
+## Static Page ##
+RewriteRule ^manage-static-page/?$ manage_static_page.php [NC,L]
+RewriteRule ^add-static-page/([A-Za-z0-9-_]+)/?$ add_static_page.php?mode=$1 [NC,L]
+RewriteRule ^add-static-page/([A-Za-z0-9-_]+)/([A-Za-z0-9-_]+)/?$ add_static_page.php?mode=$1&id=$2 [NC,L]
+
+## Order ##
+RewriteRule ^manage-order/?$ manage_order.php [NC,L]
+RewriteRule ^view-order/([A-Za-z0-9-_]+)/?$ view_order.php?id=$1 [NC,L]
+#RewriteRule ^view-order/([A-Za-z0-9-_]+)/([A-Za-z0-9-_]+)/?$ view_order.php?mode=$1&id=$2 [NC,L]
+
+## Contact ##
+RewriteRule ^manage-contact/?$ manage_contact.php [NC,L]
+RewriteRule ^add-contact/([A-Za-z0-9-_]+)/?$ add_contact.php?mode=$1 [NC,L]
+RewriteRule ^add-contact/([A-Za-z0-9-_]+)/([A-Za-z0-9-_]+)/?$ add_contact.php?mode=$1&id=$2 [NC,L]
+
+

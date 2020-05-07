@@ -8,8 +8,7 @@
 	}
 	else 
 	{
-	    $SITEURL = "http://devlopix.com/projects/sean/";
-	    $ADMINURL = "http://devlopix.com/projects/sean/apanel/";
+	    
 	}       
 		
 	define('SITEURL', $SITEURL);

@@ -13,8 +13,8 @@
 
 	define('SITEADDRESS', "2/11 Bent Street <br />St Marys NSW 2160 <br />Australia");
 
-	define("PAYPAL_URL","https://www.sandbox.paypal.com/cgi-bin/webscr");
-	define("PAYPAL_EMAIL","crazycoder08@gmail.com");
+	define("PAYPAL_URL","");
+	define("PAYPAL_EMAIL","");
 
 	define("CATEGORY", "images/category/");
 	define("CATEGORY_A", "../images/category/");

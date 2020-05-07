@@ -11,9 +11,9 @@ class Functions
 	/** Live Database Detail **/
 	
 	protected $db_host = "localhost";
-	protected $db_user = "devlofzz_sean";
-	protected $db_pass = 'sean@123';
-	protected $db_name = "devlofzz_sean"; 
+	protected $db_user = "";
+	protected $db_pass = '';
+	protected $db_name = ""; 
 	
 	protected $con = false; 
 	public $myconn; 
